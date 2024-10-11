@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 4}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 17
+  controlID: 25
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 327
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -395,8 +395,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scripts
+    m_Folders: []
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -405,15 +404,15 @@ MonoBehaviour:
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\jodir\Documents\GitHub\2GT24_25_JRooney_40465001\Create
-    with Code Part 1 Mission 2 - Basic Gameplay\Prototype 2
+  m_LastProjectPath: C:\Users\jodir\Desktop\2GT24_25_JRooney_40465001\Create with
+    Code Part 1 Mission 2 - Basic Gameplay\Prototype 2
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c8590000
     m_LastClickedID: 22984
-    m_ExpandedIDs: 00000000f05e0000f25e0000f45e0000
+    m_ExpandedIDs: 00000000ec5e0000ee5e0000f05e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -441,7 +440,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000f05e0000f25e0000f45e0000
+    m_ExpandedIDs: ffffffff00000000ec5e0000ee5e0000f05e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -975,9 +974,9 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.47052416, y: -0.00661708, z: 0.003529887, w: 0.8823579}
     speed: 2
-    m_Value: {x: 0.4705231, y: -0.006617065, z: 0.003529879, w: 0.88235587}
+    m_Value: {x: -0.4705242, y: 0.0066170804, z: -0.003529887, w: -0.88235795}
   m_Size:
-    m_Target: 12.905477
+    m_Target: 12.32473
     speed: 2
     m_Value: 12.905477
   m_Ortho:
@@ -1041,9 +1040,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 285a0000
-      m_LastClickedID: 23080
-      m_ExpandedIDs: 30fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: f8f8ffff30fbffff1c5a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
