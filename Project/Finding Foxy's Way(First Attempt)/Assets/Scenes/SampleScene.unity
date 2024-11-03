@@ -1460,11 +1460,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a4609944aa2a18542828c7bca25352b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.04322613
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4609944aa2a18542828c7bca25352b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.119999886
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a4609944aa2a18542828c7bca25352b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1632,7 +1632,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2284506, y: -0.0057329414, z: 0.0013452938, w: 0.97353774}
-  m_LocalPosition: {x: 0, y: 4.8, z: -149.9}
+  m_LocalPosition: {x: -0.14, y: 4.7, z: -150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2225,8 +2225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85b655d5f602a824d8fe16e448c3c017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  turnSpeed: 40
+  speed: 12
+  turnSpeed: 100
   horizontalInput: 0
   forwardInput: 0
 --- !u!1001 &1283955381
