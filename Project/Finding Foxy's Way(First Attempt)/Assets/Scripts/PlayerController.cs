@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Variables
-    public float speed = 7.0f;
-    public float turnSpeed = 40.0f;
+    public float speed = 12.0f;
+    public float turnSpeed = 80.0f;
     public float horizontalInput;
     public float forwardInput;
+
 
     void Start()
     {
@@ -22,9 +23,9 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
-        //Moving the veichle foward 
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-        //Turning the veichle
+        //Moving the player foward 
+        transform.Translate(transform.forward * Time.deltaTime * speed * forwardInput);
+        //Turning the player
         transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
     }
 }
