@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     public bool isOnGround = true;
     public bool hasPowerup;
-
+    public Animator anim; 
 
     void Start()
     {
@@ -30,8 +30,14 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
-        //Moving the player foward 
+        //Moving the player
+        float verticalAxis = Input.GetAxis("Vertical");
+        float horizontalAxis = Input.GetAxis("Horizontal");
+        
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+        this.anim.SetFloat("vertical", verticalAxis);
+        this.anim.SetFloat("horizontal", horizontalAxis);
+
         //Turning the player
         transform.Rotate(Vector3.up* Time.deltaTime * turnSpeed * horizontalInput);
         //Making the player jump
@@ -39,6 +45,11 @@ public class PlayerController : MonoBehaviour
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
+            this.anim.SetBool("jump", true);
+        }
+        else
+        {
+            this.anim.SetBool("jump", false);
         }
     }
     private void OnCollisionEnter(Collision collision)
