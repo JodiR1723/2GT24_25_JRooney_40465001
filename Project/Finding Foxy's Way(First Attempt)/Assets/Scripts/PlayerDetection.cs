@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerDetection : MonoBehaviour
 {
     // Variables
-    private bool shouldMove = false;
+    public GameObject objectToMove;
+    private bool playerInArea = false;
 
     void Start()
     {
@@ -15,14 +17,24 @@ public class PlayerDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        //Check if player has entered the trigger zone 
+
     }
     private void OnTriggerEnter(Collider other)
     {
-        //Check if player has entered the trigger zone
         if (other.CompareTag("Player"))
         {
-            shouldMove = true;
+            playerInArea = true;
+            
+            if (objectToMove != null)
+            {
+                objectToMove.GetComponent<ObjectMovement>().StartMoving();
+            }
         }
+
     }
 }

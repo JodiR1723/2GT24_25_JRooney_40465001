@@ -5,11 +5,14 @@ using UnityEngine;
 public class ObjectMovement : MonoBehaviour
 {
     // Variables
-    public Transform player;
-    public float moveSpeed = 5f;
-    public Vector3 moveDirection = Vector3.forward;
+    public float speed = 5f;
+    private bool isMoving = false;
 
-    private bool shouldMove = false;
+    public void StartMoving()
+    {
+        //Start moving the object
+        isMoving = true;
+    }
 
     void Start()
     {
@@ -19,11 +22,9 @@ public class ObjectMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (shouldMove)
+        if (isMoving)
         {
-            //Moving the object infront of the player
-            Vector3 targetPosition = player.position + moveDirection * 5f;
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
     }
    
