@@ -33,8 +33,8 @@ public class PlayerController : MonoBehaviour
         //Moving the player
         float verticalAxis = Input.GetAxis("Vertical");
         float horizontalAxis = Input.GetAxis("Horizontal");
-        
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+
+        playerRb.velocity = transform.forward * speed * forwardInput + transform.up * playerRb.velocity.y;
         this.anim.SetFloat("vertical", verticalAxis);
         this.anim.SetFloat("horizontal", horizontalAxis);
 
