@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -11,10 +13,15 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public TextMeshProUGUI gameOverText;
+
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        //Game Over text is hidden
+        gameOverText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,7 +35,11 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if (currentHealth <= 0)
         {
-            Debug.Log("Game Over!");
+            // Show the Game Over text
+            gameOverText.gameObject.SetActive(true);
+
+            // Pausing the game
+            Time.timeScale = 0;
         }
 
     }

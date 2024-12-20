@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerDetection : MonoBehaviour
 {
     // Variables
-    public GameObject objectToMove;
-    private bool playerInArea = false;
+    public TextMeshProUGUI finishedText;
 
     void Start()
     {
-        
+        // Finished text is hidden at the start
+        finishedText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,22 +21,18 @@ public class PlayerDetection : MonoBehaviour
     {
        
     }
-    void OnCollisionEnter(Collision collision)
-    {
-        //Check if player has entered the trigger zone 
 
-    }
-    private void OnTriggerEnter(Collider other)
+    // Finish message is triggered when the player collides with the home object
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Finish")) // Assuming the tag of the target object is "FinishLine"
         {
-            playerInArea = true;
-            
-            if (objectToMove != null)
-            {
-                objectToMove.GetComponent<ObjectMovement>().StartMoving();
-            }
-        }
+            // Show the "Finished" text
+            finishedText.gameObject.SetActive(true);
 
+            // Pause the game 
+            Time.timeScale = 0f;
+        }
     }
+    
 }
