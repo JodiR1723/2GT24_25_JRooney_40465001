@@ -22,42 +22,17 @@ public class PlayerHealth : MonoBehaviour
     {
         
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int amount)
     {
-        currentHealth -= damage;
-
-        // Ensure health doesn't go below 0
-        if (currentHealth < 0)
-        {
-            currentHealth = 0;
-        }
-
-        // Update health bar
+        currentHealth -= amount;
         healthBar.SetHealth(currentHealth);
-
-        //Player death if health is 0
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
-            Die();
+            Debug.Log("Game Over!");
         }
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        // Apply damage from a certain object
-        if (collision.gameObject.CompareTag("Damage"))
-        {
-            TakeDamage(25);
-        }
-    }
 
-    //When health reaches 0, player's dies
-    void Die()
-    {
-        // Temporary Game stopper 
-        Debug.Log("Player is dead!");
-        // Deactivate player object
-        gameObject.SetActive(false);
     }
+      
 
 }
 

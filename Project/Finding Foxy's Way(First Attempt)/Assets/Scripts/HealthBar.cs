@@ -9,6 +9,10 @@ public class HealthBar : MonoBehaviour
     //Variables
     public Slider slider;
 
+    void Update()
+    {
+        
+    }
     public void SetHealth(int health)
     {
         slider.value = health;
